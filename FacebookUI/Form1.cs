@@ -1,4 +1,5 @@
 ﻿using FacebookBackend;
+using FacebookWrapper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +16,28 @@ namespace FacebookUI
         private readonly Backend m_Backend;
         public Form1()
         {
-           m_Backend = new Backend();
+          
+            m_Backend = new Backend();
+            m_Backend.Hey();
             InitializeComponent();
         }
 
         private void f_LoginButton_Click(object sender, EventArgs e)
         {
-            m_Backend.Login();
+            if(m_Backend.Login() == "success")
+            {
+                picture_smallPictureBox.LoadAsync(m_Backend.getPicutureUrl());
+
+                if (m_Backend.getNumOfPost() > 0)
+                {
+                    textBoxStatus.Text = m_Backend.GetLastPost();
+                }
+            }
+        }
+
+        private void f_Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
