@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\..\..\..\Desktop\01_FB01_BasicFacebookFeatures.V6.8.0.18\01_FB01_BasicFacebookFeatures.V6.8.0.18\FBApi\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="FacebookBackend">
       <HintPath>..\FacebookBackend\obj\Debug\FacebookBackend.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\..\..\..\Desktop\01_FB01_BasicFacebookFeatures.V6.8.0.18\01_FB01_BasicFacebookFeatures.V6.8.0.18\FBApi\FbGraphApiWrapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
